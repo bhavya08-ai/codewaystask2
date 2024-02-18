@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script>
+        function ac(){
+            document.getElementById('as').value=""
+
+        }
+        function show(input){
+            document.getElementById('as').value+=input
+        }
+        function calc(){
+             var output=eval(document.getElementById('as').value)
+             document.getElementById('as').value=output
+
+        }
+      </script>
+    <style>
+        .fi{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <caption><h1>simple calculator</h1></caption>
+        <table border="1">
+            <tr>
+                <td colspan="3" ><input type="text" id="as"></td>
+                <td><button onclick="ac()">AC</button></td>
+            </tr>
+            <tr class="fi">
+                <td ><button onclick="show('1')">1</button></td>
+                <td><button onclick="show('2')">2</button></td>
+                <td><button onclick="show('3')">3</button></td>
+                <td><button onclick="show('+')">+</button></td>
+            </tr>
+            <tr class="fi">
+                <td ><button onclick="show('4')">4</button></td>
+                <td><button onclick="show('5')">5</button></td>
+                <td><button onclick="show('6')">6</button></td>
+                <td><button onclick="show('-')">-</button></td>
+            </tr>
+            <tr class="fi">
+                <td><button onclick="show('7')">7</button></td>
+                <td><button onclick="show('8')">8</button></td>
+                <td><button onclick="show('9')">9</button></td>
+                <td><button onclick="show('')"></button></td>
+                
+            </tr>
+            <tr class="fi">
+                <td ><button onclick="show('0')">0</button></td>
+                <td><button onclick="show('/')">/</button></td>
+                <td><button onclick="show('%')">%</button></td>
+                <td><button onclick="calc()">=</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
